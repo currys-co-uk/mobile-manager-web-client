@@ -1,0 +1,3 @@
+interface ISharedStore {
+  loadingInProgress: boolean;
+}

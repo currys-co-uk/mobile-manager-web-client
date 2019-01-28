@@ -1,0 +1,53 @@
+.panel {
+  border: 1px solid @grey-100;
+  width: 100%;
+  background: @white;
+
+  &__heading {
+    background: @grey-50;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+  }
+
+  &__heading-title {
+    padding-left: 10px;
+    flex-grow: 1;
+    border-bottom: 1px solid @grey-100;
+  }
+
+  &__content {
+    background: @white;
+    padding: 10px 5px;
+  }
+
+  &__tabs {
+    display: flex;
+  }
+
+  &__tab {
+    border: 1px solid @grey-100;
+    border-right: none;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      background: @white;
+      border-top: 3px solid @blue-100;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+
+  &__tab-link {
+    color: @grey-500;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      color: @black;
+    }
+  }
+}

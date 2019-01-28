@@ -1,0 +1,44 @@
+.reserve-device {
+  width: 500px;
+
+  &__simple {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    min-height: 40px;
+    padding: 5px 0 5px;
+
+    &--centered {
+      justify-content: center;
+    }
+  }
+
+  &__row-key {
+    flex-grow: 1;
+    height: 30px;
+  }
+
+  &__row-value {
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+  }
+
+  &__column {
+    flex-grow: 1;
+    white-space: pre-line;
+  }
+
+  &__delete-key {
+    display: flex;
+    align-items: center;
+    color: @red-50;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

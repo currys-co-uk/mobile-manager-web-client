@@ -1,0 +1,49 @@
+.configuration {
+
+  &__row {
+    display: flex;
+    height: 40px;
+    line-height: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    @media screen and (max-width: @screen-md-max) {
+      flex-direction: column;
+      height: 70px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 10px;
+    color: @grey-500;
+    align-items: center;
+
+    @media screen and (max-width: @screen-md-max) {
+      flex: none;
+      justify-content: flex-start;
+    }
+  }
+
+  &__value {
+    display: flex;
+    flex: 2;
+    padding-right: 10px;
+    align-items: center;
+
+    @media screen and (max-width: @screen-md-max) {
+      flex: none;
+      height: 30px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background: @grey-50;
+    border: 1px solid @grey-250;
+    padding-left: 10px;
+  }
+}

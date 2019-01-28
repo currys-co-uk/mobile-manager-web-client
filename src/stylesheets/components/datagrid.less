@@ -1,0 +1,157 @@
+@import "../variables.less";
+
+.datagrid {
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    line-height: 45px;
+
+    @media screen and (max-width: @screen-sm-max) {
+      flex-direction: column;
+      margin-top: 5px;
+      border: 1px solid @black;
+    }
+
+    @media screen and (min-width: @screen-md-min) {
+
+      &:nth-child(even) {
+        background-color: @white;
+
+      }
+
+      &:nth-child(odd) {
+        background-color: @grey-50;
+      }
+    }
+  }
+
+  &__column {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
+
+    &--grow-2 {
+      flex: 2;
+    }
+
+    &--grow-3 {
+      flex: 3;
+    }
+
+    &--grow-4 {
+      flex: 4;
+    }
+
+    &--grow-6 {
+      flex: 6;
+    }
+
+    &--grow-8 {
+      flex: 8;
+    }
+
+    &--grow-10 {
+      flex: 10;
+    }
+
+    &--minimal {
+      display: none;
+
+      @media screen and (max-width: @screen-sm-max) {
+        flex: 1;
+        display: block;
+      }
+    }
+  }
+
+  &__column-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+  }
+
+  &__cell {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 10px;
+
+    &--center {
+      justify-content: center;
+    }
+
+    &--grow-2 {
+      flex: 2;
+    }
+
+    &--grow-3 {
+      flex: 3;
+    }
+
+    &--grow-4 {
+      flex: 4;
+    }
+
+    &--grow-6 {
+      flex: 6;
+    }
+
+    &--grow-8 {
+      flex: 8;
+    }
+
+    &--grow-10 {
+      flex: 10;
+    }
+
+    @media screen and (max-width: @screen-sm-max) {
+      display: flex;
+      flex-direction: row;
+      height: 30px;
+      flex: none;
+
+      &:nth-child(even) {
+        background-color: @white;
+
+      }
+
+      &:nth-child(odd) {
+        background-color: @grey-50;
+      }
+    }
+  }
+
+  &__cell-content {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 5px 0 5px;
+
+    @media screen and (max-width: @screen-sm-max) {
+      flex: 1;
+      width: 50%;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex: 0 0;
+    justify-content: space-around;
+    min-height: 48px;
+    background: @grey-200;
+
+    @media screen and (max-width: @screen-sm-max) {
+      display: none;
+    }
+  }
+}

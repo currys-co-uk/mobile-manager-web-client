@@ -1,0 +1,38 @@
+.tile {
+  border-top: 5px solid @blue-100;
+  min-width: 480px;
+  max-width: 480px;
+  background: @grey-50;
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__header {
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid @grey-100;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    padding: 5px;
+  }
+
+  &__item-name {
+    color: @grey-500;
+  }
+
+  &__item-value {
+    color: @green-200;
+  }
+}
+
+.tile-container {
+  padding: 30px 15px 0 15px;
+}

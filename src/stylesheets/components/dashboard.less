@@ -1,0 +1,27 @@
+@import "../variables.less";
+
+.dashboard {
+  padding: 20px;
+  overflow: auto;
+  height: 100%;
+
+  &__content {
+    background: @grey-50;
+  }
+
+  &__add-reservation {
+    background: @blue-100;
+    color: white;
+    border: none;
+    line-height: 25px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: @screen-sm-max) {
+      display: flex;
+    }
+  }
+}

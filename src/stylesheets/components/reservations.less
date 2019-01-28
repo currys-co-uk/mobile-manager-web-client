@@ -1,0 +1,65 @@
+.reservations {
+  padding: 20px;
+  overflow: auto;
+
+  &__content {
+    background: @grey-50;
+  }
+
+  &__create {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  &__create-button {
+    background: @blue-100;
+    color: @white;
+    width: 200px;
+    height: 30px;
+    border: 0;
+  }
+
+  &__applied {
+    margin-top: 0;
+  }
+
+  &__queued {
+    margin-top: 10px;
+  }
+
+  &__requested-by {
+    line-height: 15px;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__queued-devices {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__applied-devices {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__remove-reservation {
+    background: @red-50;
+    cursor: pointer;
+    line-height: 25px;
+    color: @white;
+    border: none;
+    padding: 5px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: @screen-sm-max) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

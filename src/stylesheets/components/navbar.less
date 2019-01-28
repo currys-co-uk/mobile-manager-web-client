@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: @white;
+  border-bottom: 1px @grey-100;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+
+    &--light {
+      color: @grey-400;
+    }
+  }
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.navbar-action {
+  &__item {
+    padding-left: 10px;
+  }
+
+  &__burger-menu {
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-profile {
+  display: flex;
+}

@@ -1,0 +1,39 @@
+@import "../variables.less";
+
+.device-status {
+  color: @white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  justify-content: center;
+  line-height: initial;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &__online {
+    background: @green-100;
+  }
+
+  &__offline {
+    background: @red-50;
+  }
+
+  &__locked {
+    background: @orange-50;
+  }
+
+  &__unknown {
+    background: @grey-50;
+  }
+
+  &__failed-to-initialize {
+    background: @purple-50;
+  }
+
+  &__initialize {
+    background: @blue-50;
+  }
+
+  &__locked-offline {
+    background: @black;
+  }
+}
