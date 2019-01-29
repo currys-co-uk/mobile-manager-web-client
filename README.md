@@ -16,3 +16,10 @@
  1. Use VS Code
  2. Press F5
 
+ ## Specify Mobile Manager backend
+ 1. create/edit file .env in main directory
+ 2. add following env variables
+	REACT_APP_mobileManagerApi='http://mm_ip_addr:mm_port/api/v1'
+	REACT_APP_mobileManagerServerUrl='http://mm_ip_addr:mm_port'
+	REACT_APP_ENV='production' 
+
