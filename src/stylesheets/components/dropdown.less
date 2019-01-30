@@ -1,0 +1,113 @@
+.dropdown {
+  position: relative;
+  min-width: 300px;
+  padding: 0 2px 0 2px;
+
+  &__control {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid @grey-400;
+    min-width: 320px;
+    max-width: 320px;
+  }
+
+  &__selected-value {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &--disabled {
+      color: @grey-450;
+      user-select: none;
+    }
+  }
+
+  &__clearbox {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    color: @grey-350;
+    font-size: 12px;
+
+    &:hover {
+      cursor: pointer;
+      color: @black;
+    }
+  }
+
+  &__seprator {
+    align-self: stretch;
+    background-color: @grey-400;
+    width: 1px;
+    margin: 0 5px 0 2px;
+    box-sizing: border-box;
+  }
+
+  &__indicator {
+    color: @grey-500;
+    font-size: 16px;
+
+    &--disabled {
+      color: @grey-500;
+
+      &:hover {
+        cursor: not-allowed !important;
+        color: @grey-500 !important;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: @grey-600;
+    }
+
+    &:active {
+      color: @grey-600;
+    }
+
+    &--active {
+      color: @black;
+
+      &:hover {
+        color: @black;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    margin-top: 2px;
+    background: @white;
+    max-height: 200px;
+    width: 100%;
+    border: @grey-200 1px solid;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 10px 20px 5px @grey-400;
+    z-index: 1;
+  }
+
+  &__option {
+    font-size: 14px;
+    padding: 5px 0 5px 15px;
+
+    &:hover {
+      background: @blue-50;
+      cursor: pointer;
+    }
+
+    &--selected {
+      color: @white;
+      background: @blue-100;
+
+      &:hover {
+        background: @blue-100;
+      }
+    }
+  }
+}

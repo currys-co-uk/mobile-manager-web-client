@@ -1,0 +1,60 @@
+.device-detail {
+  display: flex;
+  padding: 20px;
+  height: 100%;
+
+  &__container {
+    display: flex;
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 400px;
+    flex-grow: 1;
+  }
+
+  &__image {
+    min-width: 200px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__selenium-config {
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    color: @grey-600;
+    white-space: pre-line;
+    overflow: hidden;
+
+    &:hover {
+      overflow: auto;
+    }
+  }
+
+  &__selenium-buttons {
+    display: flex;
+    padding-top: 10px;
+  }
+
+  &__appium-log {
+    white-space: pre-line;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  &__action-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
