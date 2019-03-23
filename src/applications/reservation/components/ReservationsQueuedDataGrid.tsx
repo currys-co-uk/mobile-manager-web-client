@@ -111,7 +111,7 @@ export class ReservationsQueuedDataGrid extends React.PureComponent<IReservation
                     }
 
                     if (requestedById) {
-                      line.push(<div className="reservations__requested-by" key={line.length}>DeviceId: {device.deviceId}) </div>);
+                      line.push(<div className="reservations__requested-by" key={line.length}>DeviceId: {device.deviceId}</div>);
                     }
 
                     return line;
