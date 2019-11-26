@@ -15,6 +15,7 @@
     "@types/react-modal": "^3.2.1",
     "@types/react-router": "^4.0.32",
     "classnames": "^2.2.6",
+    "copy-to-clipboard": "^3.2.0",
     "immutable": "^3.8.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

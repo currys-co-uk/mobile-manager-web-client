@@ -6,11 +6,12 @@ import {DeviceDetailSelenium} from "./DeviceDetailSelenium";
 import { DeviceDetailActionButtons } from "./DeviceDetailActionButtons";
 import { IDevice } from "../../../_shared/api/models/IDevice";
 import { IReservationApplied } from "../../../_shared/api/models/IReservationApplied";
+import { ISeleniumConfig } from 'src/_shared/api/models/ISeleniumConfig';
 
 interface IDeviceDetailBasicInfoProps {
-  device: IDevice;
-  reservationApplied?: IReservationApplied ;
-  seleniumConfig: string;
+  device: IDevice
+  reservationApplied?: IReservationApplied
+  seleniumConfig: ISeleniumConfig
 }
 
 
