@@ -9,9 +9,9 @@ import { IReservationApplied } from "../../../_shared/api/models/IReservationApp
 import { ISeleniumConfig } from 'src/_shared/api/models/ISeleniumConfig';
 
 interface IDeviceDetailBasicInfoProps {
-  device: IDevice
-  reservationApplied?: IReservationApplied
-  seleniumConfig: ISeleniumConfig
+  device: IDevice;
+  reservationApplied?: IReservationApplied;
+  seleniumConfig: ISeleniumConfig;
 }
 
 

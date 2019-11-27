@@ -7,7 +7,7 @@ interface IDeviceDetailSeleniumProps {
 }
 
 interface IDeviceDetailSeleniumState {
-  shownSeleniumConfig: string;
+  selectedSeleniumConfig: string;
 }
 
 export class DeviceDetailSelenium extends React.PureComponent<IDeviceDetailSeleniumProps, IDeviceDetailSeleniumState> {
@@ -16,18 +16,15 @@ export class DeviceDetailSelenium extends React.PureComponent<IDeviceDetailSelen
     super(props);
 
     this.state = {
-      shownSeleniumConfig: "xtest"
+      selectedSeleniumConfig: "xtest"
     };
 
-    this.showConfig = this.showConfig.bind(this);
+    this.toggleConfig = this.toggleConfig.bind(this);
     this.copyToClipboard = this.copyToClipboard.bind(this);
   }
 
   public render(): JSX.Element {
-    let data = "Loading...";
-    if (this.props.seleniumConfig !== undefined) {
-      data = this.props.seleniumConfig[this.state.shownSeleniumConfig];
-    }
+    const data = this.props.seleniumConfig && this.props.seleniumConfig[this.state.selectedSeleniumConfig] || 'Loading...';
     return (
       <div className="tile-container">
         <div className="tile">
@@ -36,11 +33,11 @@ export class DeviceDetailSelenium extends React.PureComponent<IDeviceDetailSelen
           </div>
           <div className="tile__body">
           <div>
-            <button className="device-detail__selenium-button" data-config="xtest" onClick={e => this.showConfig(e)}>PHP-xTest</button>
-            <button className="device-detail__selenium-button" data-config="codeceptjs" onClick={e => this.showConfig(e)}>CodeceptJS/JSQA</button>
+            <button className="device-detail__selenium-button" data-config="xtest" onClick={e => this.toggleConfig(e)}>PHP-xTest</button>
+            <button className="device-detail__selenium-button" data-config="codeceptjs" onClick={e => this.toggleConfig(e)}>CodeceptJS/JSQA</button>
           </div>
             <pre className="device-detail__selenium-config">
-              {data}}
+              {data}
             </pre>
             <div className="device-detail__selenium-buttons">
               <button className="device-detail__selenium-button" onClick={e => this.copyToClipboard(e)}>Copy To Clipboard</button>
@@ -51,13 +48,13 @@ export class DeviceDetailSelenium extends React.PureComponent<IDeviceDetailSelen
       </div>
     )
   }
-  private showConfig(event: React.SyntheticEvent<HTMLButtonElement>): void {
+  private toggleConfig(event: React.SyntheticEvent<HTMLButtonElement>): void {
     this.setState({
-      shownSeleniumConfig: event.currentTarget.dataset.config || "xtest"
+      selectedSeleniumConfig: event.currentTarget.dataset.config || "xtest"
       }
     );
   }
   private copyToClipboard(event: React.SyntheticEvent<HTMLButtonElement>): void {
-      copy(this.props.seleniumConfig[this.state.shownSeleniumConfig]);
+      copy(this.props.seleniumConfig[this.state.selectedSeleniumConfig]);
   }
 }
