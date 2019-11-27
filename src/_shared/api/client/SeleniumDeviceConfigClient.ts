@@ -1,5 +1,6 @@
 import 'whatwg-fetch'
 import { IRestClient } from "./IRestClient";
+import { ISeleniumConfig } from '../models/ISeleniumConfig';
 
 export class SeleniumDeviceConfigClient {
 
@@ -9,7 +10,7 @@ export class SeleniumDeviceConfigClient {
     this.ApiEndpoint = props.apiEndpoint;
   }
 
-  public async getSeleniumConfig(deviceId: string): Promise<string> {
+  public async getSeleniumConfig(deviceId: string): Promise<ISeleniumConfig> {
     return fetch(`${this.ApiEndpoint}/device/seleniumconfig/${deviceId}`)
       .then(response => {
         if (response.ok) {

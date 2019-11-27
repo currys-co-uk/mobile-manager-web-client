@@ -8,12 +8,13 @@ import {DeviceDetailAppiumLog} from "./DeviceDetailAppiumLog";
 import {DeviceDetailBasicInfo} from "./DeviceDetailBasicInfo";
 import {IPanelTab, PanelWithTabs} from "../../../_shared/components/PanelWithTabs";
 import {IDeviceRouteParams} from "../containers/DeviceDetail";
+import {ISeleniumConfig} from 'src/_shared/api/models/ISeleniumConfig';
 
 export interface IDeviceDetailDataProps {
   device: IDevice;
   reservationApplied?: IReservationApplied;
   appiumLog: string;
-  seleniumConfig: string;
+  seleniumConfig: ISeleniumConfig;
 }
 
 export interface IDeviceDetailCallbackProps {
