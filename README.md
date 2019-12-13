@@ -1,4 +1,5 @@
 # mobile-manager-web-free
+[![Build Status](https://travis-ci.com/dixons/mobile-manager-web-client.svg?branch=master)](https://travis-ci.com/dixons/mobile-manager-web-client)
 
 ## How to compile and run the website
  1. Install NodeJs
