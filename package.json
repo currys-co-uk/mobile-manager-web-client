@@ -17,6 +17,7 @@
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.2.0",
     "immutable": "^3.8.2",
+    "less": "^3.10.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-modal": "^3.6.1",
